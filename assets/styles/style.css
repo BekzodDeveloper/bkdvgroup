@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/*Container*/
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Intro*/
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/intro2.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.intro__title {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 5.5em;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    width: .5em;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    margin: 50px auto;
+}
+
+.intro__suptitle {
+    margin-bottom: 15px;
+    font-size: 4em;
+    color: #fff;
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    color: #fff;
+    border: 3px solid #fff;
+    text-decoration: none;
+    padding: 5px 25px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-transform: uppercase;
+    transition: .3s linear;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: darkorange;
+    transition: .3s linear;
+}
+
+/*Header*/
+
+.header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding-top: 1em;
+    background-color: #123749ec;
+    border-bottom: 1px solid #eda048ee;
+}
+
+.header__inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "header__logo" "nav";
+}
+
+.header__logo {
+    grid: "header__logo";
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/*Nav*/
+
+.nav {
+    grid: "nav";
+    justify-self: end;
+    align-self: center;
+    font-size: .9em;
+    box-sizing: border-box;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s linear;
+    position: relative;
+}
+
+.nav__link:hover {
+    color: darkorange;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: darkorange;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: .3s linear;
+    opacity: 0;
+}
+
+.nav__link:hover::after {
+    opacity: 2;
+}
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(221, 221, 221, 0.425);
+    padding: 3.5em 0;
+    /* border-bottom: 1px solid #eda048; */
+    box-shadow: inset 0px 0px 10px #eda048;
+}
+.about__inner{
+    max-width: 880px;
+    margin: 0 auto;
+}
+.about__suptitle{
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.about__title{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.about__title::after{
+    content: "";
+    display: block;
+    width: 2em;
+    height: 3px;
+    background-color: darkorange;
+    margin: 1.5em auto;
+}
+.about__imgAndText{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-area: "myphoto text";
+}
+.about__myphoto{
+    grid: "myphoto";
+    background-image: url("assets/images/myphoto.jpg");
+    width: 100%;
+    padding: 1em;
+}
+.img__photo{
+    width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    box-shadow: 10px 10px 0px #eda048;
+}
+.about__text{
+    grid: "text";
+    padding: 1.5em;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/*Work*/
+
+.work{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(221, 221, 221, 0.712);
+    padding: 3.5em 0;
+}
+
+.work__suptitle{
+    font-family: 'Kaushan Script';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.work__title{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.work__title::after{
+    content: "";
+    display: block;
+    width: 2em;
+    height: 3px;
+    background-color: darkorange;
+    margin: 1.5em auto;
+}
+.work__blockOfAdvs{
+    padding: 1em 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-area: "advs advs advs";
+    grid-gap: 1em;
+}
+.work__advs{
+    grid: "advs";
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 2%;
+    background-color: #fff;
+
+}
+
+.work__advs_icon{
+    background-color: darkorange;
+    border-radius: 1% ;
+}
+.fab, .fas{
+    font-size: 2em;
+    padding: .5em 0;
+    color: #fff;
+}
+.work__advs_title{
+    font-size: 1.2em;
+    padding: 1em 0 0;
+    margin: 0 auto;
+}
